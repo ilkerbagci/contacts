@@ -47,6 +47,7 @@ class ListContacts extends Component{
           {showingContats.length !== contacts.length && (
             <div className='showing-contacts'>
               <span>Now showing {showingContats.length} of {contacts.length}</span>
+              <button onClick={this.clearQuery}>Show All</button>
             </div>
           )}
 
