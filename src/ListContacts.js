@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 class ListContacts extends Component{
   static propTypes = {
-
     contacts: PropTypes.array.isRequired,
     onDeleteContact: PropTypes.func.isRequired,
   }
+
   state = {
     query : ''
   }
@@ -21,7 +21,6 @@ class ListContacts extends Component{
     this.updateQuery('')
   }
   render(){
-
 
     const { query } = this.state
     const { contacts, onDeleteContact } = this.props
@@ -50,7 +49,7 @@ class ListContacts extends Component{
               <button onClick={this.clearQuery}>Show All</button>
             </div>
           )}
-
+          
           <ol className='contact-list'>
           {showingContats.map((contact) => (
           <li key={contact.id} className='contact-list-item'>
@@ -73,7 +72,6 @@ class ListContacts extends Component{
         ))}
       </ol>
       </div>
-      
     )
   }
 }
